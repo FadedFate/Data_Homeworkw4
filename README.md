@@ -16,17 +16,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.utils import shuffle
+
 from pyod.models.pca import PCA
 from pyod.models.knn import KNN
 from pyod.models.lof import LOF
 from pyod.models.iforest import IForest
+
+from time import *
 import sys
 import os
-import random
-from sklearn import preprocessing
-from sklearn.utils import shuffle
-from pyod.utils.data import evaluate_print
-from time import *
+
+from sklearn.metrics import roc_auc_score
+from sklearn.utils import column_or_1d
+from sklearn.utils import check_consistent_length
+from pyod.utils.utility import precision_n_scores
+
+import warnings
 ```
 
 ------------
